@@ -5,7 +5,7 @@
 
 # ── Environment Variables (non-secret) ───────────────────────────────────────
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "24"
 
 # ── SPA Redirect ─────────────────────────────────────────────────────────────
 # Sends all routes to index.html so React Router (if added later) works correctly
