@@ -1,0 +1,35 @@
+# ── Build Settings ────────────────────────────────────────────────────────────
+[build]
+  command   = "npm run build"
+  publish   = "dist"
+
+# ── Environment Variables (non-secret) ───────────────────────────────────────
+[build.environment]
+  NODE_VERSION = "20"
+
+# ── SPA Redirect ─────────────────────────────────────────────────────────────
+# Sends all routes to index.html so React Router (if added later) works correctly
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200
+
+# ── Cache Headers ─────────────────────────────────────────────────────────────
+# Vite hashes asset filenames — safe to cache them for a long time
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# index.html must never be cached so deploys take effect immediately
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+
+# ── Deploy Previews ───────────────────────────────────────────────────────────
+[context.deploy-preview]
+  command = "npm run build"
+
+[context.branch-deploy]
+  command = "npm run build"

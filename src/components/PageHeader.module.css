@@ -1,0 +1,78 @@
+.header {
+  padding: 64px 0 40px;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  color: var(--grease-amber);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 2px;
+  background: var(--grease-amber);
+}
+
+.title {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
+  line-height: 0.98;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  max-width: 760px;
+}
+
+.title span {
+  color: var(--grease-amber);
+}
+
+.subhead {
+  margin-top: 22px;
+  font-size: 1.08rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+}
+
+.statusStrip {
+  display: flex;
+  gap: 28px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.statusChip {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--pass-green);
+  box-shadow: 0 0 8px var(--pass-green);
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 48px 0 32px;
+  }
+}

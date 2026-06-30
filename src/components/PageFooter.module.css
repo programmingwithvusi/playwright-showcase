@@ -1,0 +1,21 @@
+.footer {
+  margin-top: 80px;
+  padding: 28px 0 56px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11.5px;
+  color: var(--text-dim);
+  letter-spacing: 0.06em;
+}
+
+.tag b {
+  color: var(--grease-amber-dim);
+}

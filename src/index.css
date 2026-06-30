@@ -1,0 +1,45 @@
+/* ── CSS Custom Properties ─────────────────────────────────────────────────── */
+:root {
+  --bg-steel: #16181c;
+  --bg-panel: #1d2024;
+  --bg-panel-raised: #24282d;
+  --grease-amber: #ff8c1a;
+  --grease-amber-dim: #c96e12;
+  --safety-yellow: #f4c430;
+  --pass-green: #5fd97a;
+  --rivet: #3a3f47;
+  --text-primary: #e9e7e0;
+  --text-secondary: #9a9fa8;
+  --text-dim: #6b7077;
+  --line: #34383f;
+  --code-bg: #131517;
+}
+
+/* ── Global Resets ─────────────────────────────────────────────────────────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-steel);
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(255, 140, 26, 0.06), transparent 45%),
+    radial-gradient(circle at 90% 80%, rgba(95, 217, 122, 0.05), transparent 40%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.012) 0px,
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  color: var(--text-primary);
+  font-family: 'Archivo', sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}

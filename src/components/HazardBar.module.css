@@ -1,0 +1,11 @@
+.hazardBar {
+  height: 10px;
+  width: 100%;
+  background: repeating-linear-gradient(
+    135deg,
+    var(--safety-yellow),
+    var(--safety-yellow) 18px,
+    #1a1a1a 18px,
+    #1a1a1a 36px
+  );
+}

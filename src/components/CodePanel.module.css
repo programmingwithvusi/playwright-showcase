@@ -1,0 +1,63 @@
+.codePanel {
+  background: var(--code-bg);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.titlebar {
+  background: var(--bg-panel-raised);
+  border-bottom: 1px solid var(--line);
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filename {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filename::before {
+  content: '◆';
+  color: var(--grease-amber);
+  font-size: 10px;
+}
+
+.traffic {
+  display: flex;
+  gap: 7px;
+}
+
+.traffic span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--rivet);
+}
+
+.pre {
+  padding: 26px 24px;
+  overflow-x: auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13.4px;
+  line-height: 1.75;
+}
+
+.pre code {
+  white-space: pre;
+}
+
+/* Syntax token colours — global because they are injected via dangerouslySetInnerHTML */
+:global(.tok-kw)   { color: #ff8c1a; }
+:global(.tok-fn)   { color: #5fd97a; }
+:global(.tok-str)  { color: #f4c430; }
+:global(.tok-com)  { color: var(--text-dim); font-style: italic; }
+:global(.tok-punc) { color: var(--text-secondary); }
+:global(.tok-plain){ color: var(--text-primary); }
